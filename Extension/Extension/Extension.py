@@ -10,7 +10,7 @@ class MyExtension(Extension):
         pass
 
     def createActions(self, window):
-        action = window.createAction("testAction", "テストスクリプト", "tools/scripts")
+        action = window.createAction("testAction", "テスト!", "tools/scripts")
         # action.triggered.connect(self.exportDocument)
         action.triggered.connect(self.drawStrokes)
         pass
@@ -28,9 +28,11 @@ class MyExtension(Extension):
 
     def drawStrokes(self):
         doc =  Krita.instance().activeDocument()
+        view = Krita.instance().activeWindow().activeView()
+        print(view.currentBrushPreset())
+        
         if doc is not None:
-            
-
+            QMessageBox.information(QWidget(), "Test", "Hello! This is Krita " + Application.version()+str(view.brushSize()))
 
 
 Krita.instance().addExtension(MyExtension(Krita.instance()))

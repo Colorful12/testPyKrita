@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ActionCollection version="2" name="Scripts">
     <Actions category="Scripts">
-        <text>test Extention</text>
+        <text>test Extension</text>
 
-        <Action name="testExtention">
+        <Action name="testExtension">
         <icon></icon>
-        <text>test Extention!</text>
+        <text>test Extension!</text>
         <whatsThis></whatsThis>
         <toolTip></toolTip>
         <iconText></iconText>
